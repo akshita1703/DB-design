@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+    .main-container{ 
+        height: 100vh;
+        background-image: url(img/system.jpg);
+        background-size: cover;
+    
+    }
+    .btn_one {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        
+        position: absolute;
+        left: 18px;
+        line-height: 80px;
+        animation-name: btnanimation;
+    animation-duration: 3s;
+    animation-timing-function: 4s;
+    animation-delay: 0;
+    animation-iteration-count: 3;
+        
+    }
+    
+    .sidebar{ 
+        position: fixed;
+        left: -350px;
+        height: 100vh;
+        width: 350px;
+        background-color: rgba(129, 129, 107, 0.1);
+        transition: all 0.5s linear;
+    
+    
+    }
+    .sidebar .logo {
+        color: white;
+        position: absolute;
+       width: 100%;
+      
+       line-height: 60px;
+       height: 60px;
+    
+    
+    }
+    .sidebar .logo:hover{
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    .sidebar .logo a{
+        position: absolute;
+        left: 60px;
+        top: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 35px;
+        font-weight: 500px;
+    
+        }
+        
+    .sidebar .btn_two i{
+        color: rgb(152, 148, 148);
+        font-size: 30px;
+        position: absolute;
+        left: 290px;
+        line-height: 60px;
+        top: 10px;
+        cursor: pointer;
+    
+       
+    }
+    .sidebar .sidebar_menu {
+        color: white;
+        position: absolute;
+        width: 100%;
+        top: 100px;
+    }
+    .sidebar .sidebar_menu i,a{
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+    }
+    .sidebar .sidebar_menu i{
+       padding: 15px 25px;
+    }
+    .sidebar .social-links{
+        color: white;
+        position: absolute;
+    bottom: 30px;
+    left: 25%;
+    opacity: 0.8;
+    
+    }
+    .sidebar .social-links i{
+        text-decoration: none;
+        padding: 10px;
+    }
+    .sidebar .social-links i:hover{
+        opacity: 1;
+        transform: scale(1.5);
+        background-color: rgb(250, 80, 80);
+        border-radius: 50px;
+    }
+    
+    
+    .sidebar .sidebar_menu li:hover{
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        
+    }
+    .sidebar .btn_two i:hover{
+       color: rgb(249, 0, 0);
+       box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+    .btn_one i:hover{
+        font-size: 40px;
+    
+    }
+    
+    @keyframes btnanimation {
+        from{
+            color: rgb(42, 165, 58);
+            
+        }
+        to{
+            color: rgb(238, 255, 0);
+        }
+        
+    }
+    #check{
+        display: none;
+    }
+    #check:checked ~ .sidebar{
+        left:0;
+    }
+    
+    #check:checked ~ .btn_one i{
+        opacity: 0;
+    }
+    #check:checked ~ .sidebar .btn_two i{
+        opacity: 1;
+    }
